@@ -14,7 +14,7 @@ public class BanCo {
     public static final int no_player = 0; // no player
     public static final int player_x = 1; // chon danh x
     public static final int player_0 = 2; // chon danh O
-    private int[][] board = new int[3][3]; // so o tren ban co 3x3
+    private int[][] board = new int[6][6]; // so o tren ban co 3x3
     public Point computerMove; 
     
     public boolean GameOver(){
@@ -32,7 +32,7 @@ public class BanCo {
         }
         
         //check row va columm
-        for(int i=0;i<3;i++){
+        for(int i=0;i<6;i++){
             if ((board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0] == player)
                     || 
                     (board[0][i] == board[1][i] && board[0][i] == board[2][i] && board[0][i] == player)
@@ -47,8 +47,8 @@ public class BanCo {
         
         List<Point> availableCells = new ArrayList<>();
         
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
+        for(int i=0;i<6;i++){
+            for(int j=0;j<6;j++){
                 if (board[i][j] == no_player)
                     availableCells.add(new Point(i,j));
             }
@@ -66,8 +66,8 @@ public class BanCo {
     
     public void displayBoard(){
         System.out.println();
-        for(int i=0;i<3;i++){ // thay doi value o day de tang o trong ban co
-            for(int j=0;j<3;j++){
+        for(int i=0;i<6;i++){ // thay doi value o day de tang o trong ban co
+            for(int j=0;j<6;j++){
                 // o trong chua duoc danh dau la " ? "
                 String value = "?";
                 if (board[i][j] == player_x)

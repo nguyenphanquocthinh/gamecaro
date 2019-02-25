@@ -25,7 +25,7 @@ public class caro {
         
         // neu chon 1 thi user la "x" va nguoc lai
         if(choice == BanCo.player_x){
-            Point p = new Point(RANDOM.nextInt(3),RANDOM.nextInt(3));
+            Point p = new Point(RANDOM.nextInt(6),RANDOM.nextInt(6));
             b.placeMove(p, BanCo.player_x);
             b.displayBoard();
         }
