@@ -33,9 +33,12 @@ public class BanCo {
         
         //check row va columm
         for(int i=0;i<6;i++){
-            if ((board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0] == player)
+            if ((board[i][0] == board[i][1]&& board[i][0] == board[i][2]&& board[i][0] == board[i][3]
+            && board[i][0] == board[i][4] && board[i][0] == board[i][5] && board[i][0] == player)
                     || 
-                    (board[0][i] == board[1][i] && board[0][i] == board[2][i] && board[0][i] == player)
+                    (board[0][i] == board[1][i]&& board[0][i] == board[2][i] 
+                        && board[0][i] == board[3][i] && board[0][i] == board[4][i] 
+                        && board[0][i] == board[5][i]&& board[0][i] == player)
                     )
                 return true;
         }
@@ -108,7 +111,7 @@ public class BanCo {
                 max = Math.max(currentScore,max);
                 
                 if(depth == 0) // in ra cac gia tri cua diem
-                    System.out.println("Gia tri cua diem la "+point+"="+currentScore);
+                    // System.out.println("Gia tri cua diem la "+point+"="+currentScore);
                 if(currentScore >= 0) // in ra nhung diem va gia tri AI da danh
                     if(depth == 0)
                         computerMove = point;
